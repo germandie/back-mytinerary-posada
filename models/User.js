@@ -18,3 +18,4 @@ let schema = new Schema({
 //pasando como parametros DONDE tengo que crear los documentos y con que FORMA
 let User = model(collection,schema)
 export default User
+

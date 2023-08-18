@@ -140,4 +140,4 @@ async function createCities(arrayCities) {
     }
 }
 
-createCities(cities)
+createCities(cities) 
