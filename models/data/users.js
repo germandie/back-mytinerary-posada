@@ -29,7 +29,5 @@ connect(process.env.LINK_DB)
     .then(()=>{
         User.insertMany(users)
         console.log('done!');
-
-    
     })
     .catch(err=>console.log(err))
