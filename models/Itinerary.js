@@ -6,9 +6,11 @@ let schema = new Schema({
     city_id: {type:Types.ObjectId,required:true,ref:'cities' },
     price: { type:Number,required:true },
     duration: {type:Number,required:true },
-    tags: {type: [String], requirid:true},
+    tags: {type: [String], required:true},
     photo: { type:String,required:true }
     
+},{
+    timestamps: true
 })
 
 let Itinerary = model(collection,schema)
