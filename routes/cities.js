@@ -18,7 +18,7 @@ router.post('/', create)
 //READ
 router.get('/', read)
 router.get('/carousel',carousel)
-router.get('/:_id',readOne)
+router.get('/:city_id',readOne)
 
 // Nueva ruta para obtener detalles de una ciudad por su ID
 router.get('/details/:_id', readOne);
