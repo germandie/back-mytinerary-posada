@@ -7,7 +7,10 @@ let schema = new Schema({
     price: { type:Number,required:true },
     duration: {type:Number,required:true },
     tags: {type: [String], required:true},
-    photo: { type:String,required:true }
+    photo: { type:String,required:true },
+    creator: { type:String,required:true },
+    profile_picture: { type:String,required:true }
+
     
 },{
     timestamps: true
