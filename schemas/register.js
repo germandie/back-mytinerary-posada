@@ -15,7 +15,7 @@ let registerSchema = joi.object({
         "string.empty": "mail is required",
         //"string.minDomainSegments": "número de segmentos necesarios para el dominio"
     }),
-    password: joi.string().min(8).max(20).required().alphanum({ ignoreCase: false }).messages({
+    password: joi.string().min(8).max(20).required().alphanum().messages({
         'string.min': "password must have at least 8 characters please",
         'string.max': "password must be less than 21 characters please",
         'string.required': "password is required",
