@@ -22,7 +22,13 @@ let registerSchema = joi.object({
         "string.empty": "password is required",
         'string.pattern.base': "password must contain both letters and numbers",
     }),
-    country: joi.string().required(),
+    country: joi.string().required().min(5).max(20).messages({
+        'string.min': "last name must have at least 5 characters please",
+         'string.max': "last name must be less than 21 characters please"
+         
+    }),
+
+
     lastName: joi.string().min(3).max(20).empty("").messages({
         'string.min': "last name must have at least 3 characters please",
          'string.max': "last name must be less than 21 characters please",
@@ -35,6 +41,12 @@ let registerSchema = joi.object({
          'string.max': "last name must be less than 21 characters please",
          "any.required": "last name is required",
          "string.empty": "last name is required"
+    }),
+
+    photo: joi.string().min(5).max(300).messages({
+        'string.min': 'name must have at least 100 characters please!',
+        'string.max': 'name must be less than 151 characters please! ',
+ 
     }),
 
 })
